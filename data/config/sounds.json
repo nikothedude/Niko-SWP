@@ -1,0 +1,11 @@
+{
+	
+	# ICEWIND
+	"niko_icewindPayloadLoop": {
+		"sounds":[
+			{"file":"sounds/weapons/niko_icewindPayloadLoop.ogg", "pitch":1.0,"volume":1.0},
+		],
+	},
+
+
+}

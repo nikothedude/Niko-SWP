@@ -1,0 +1,12 @@
+id,type,text1,text2,text3,notes
+niko_bullrushRack,WEAPON,"A medium-range EMP missile, equipped with a small shield generator that backfeeds into the EMP emitter, causing increasing damage as shield strain rises.",,,
+niko_towerTorpedo,WEAPON,"An extremely slow ""torpedo"" with an extremely strong shield generator integrated into its hull. In absence of payload, the shield generator will overload on impact and cause modest damage. Best used defensively.",,,
+niko_towerTorpedoLauncher,WEAPON,"A simple launch tube loaded with six tower-class shield generators. Capable of firing in rapid succession, this weapon is capable of shutting down all but the most intense incoming fire.",,,
+niko_icewindPod,WEAPON,"An atypical missile weapon, the icewind trades beam damage for a devastating EMP effect that can leave any ships that dare to lower their shields crippled for long periods of time. Fragile on paper, the icewind is protected only by a small shield generator and its generous range.",,,
+niko_mallet,WEAPON,"A low-yield chemical warhead strapped to an underwhelming engine, held together only by a small shield generator attached to the fore of the hull. Useful at both absorbing and delivering modest damage.
+
+A large internal magazine ensures protracted usefulness.",,,
+niko_malletPod,WEAPON,"The mallet-class S-MRM, now in pod form. Equipped with an even larger magazine and rapid cycling actuators, this weapon can absorb entire salvos of incoming fire before delivering equal firepower.",,,
+niko_sawnOffSabot,WEAPON,"A product of desperation rather than ingenuity, this rack of sabot SRMs has been hapazardly converted to use a hammer-based priming mechanism, much like a crude firearm. Such a violent launch drastically reduces range, accuracy, and damage output, but vastly improves strike capability.",,,
+niko_shieldNodeSmall,WEAPON,"Rather than using the power conduits of a weapon mount for firepower, the ISS-312 shield generator uses it to project a weak yet capable shield in the direction of the chassis' facing. Excellent for defense usage, but a bit hard to mount for its usefulness.",,,
+niko_shieldNodeLarge,WEAPON,"The ISS-312 shield node, perfected. Made only a moderate headache to mount, capable of projecting a cruiser-class shield, and one large enough to absorb volleys of fire. The only downside is its size - it uses the highly desirable large mount, but certain captains swear by it all the same.",,,

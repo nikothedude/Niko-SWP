@@ -1,0 +1,22 @@
+{
+	"id":"niko_shieldNodeSmall",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"everyFrameEffect":"data.scripts.weapons.MPC_shieldNodeSmallScript",
+	#"everyFrameEffect":"com.fs.starfarer.api.impl.combat.dweller.VortexLauncherEffect",
+	"type":"ENERGY",
+	"size":"SMALL",
+	"turretSprite":"graphics/weapons/niko_shieldNodeSmallTurret.png",
+	#"turretGlowSprite":"graphics/weapons/railgun_turret_glow.png",
+	"hardpointSprite":"graphics/weapons/niko_shieldNodeSmallHard.png",
+	#"hardpointGlowSprite":"graphics/weapons/railgun_hardpoint_glow.png",
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"glowColor":[130,155,145,255],
+	"turretOffsets":[18, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[12, 0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"GLOW",
+	"projectileSpecId":"niko_shieldNodeShot",  # projectile that will be fired
+	#"fireSoundTwo":"threat_swarm_launched",
+}
