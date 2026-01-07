@@ -3,7 +3,7 @@
 	"name":"Niko's SWP", # Displayed to the player
 	"author":"Niko, Khepht (Some sprites)",
     "utility":"false",
-	"version":"1.0.0",
+	"version":"1.0.1",
 	"description":"A bunch of weapons I don't know where to put.",
     "gameVersion": "0.98a-RC5",
   	"jars":["jars/niko_SWP.jar"],

@@ -1,7 +1,7 @@
 {
   "hullName": "Shield Drone",
   "hullId": "niko_shield_drone",
-  "hullSize": "FRIGATE",
+  "hullSize": "FIGHTER",
   "spriteName": "graphics/fx/empty.png",
   "style": "HIGH_TECH",
   "height": 4,
