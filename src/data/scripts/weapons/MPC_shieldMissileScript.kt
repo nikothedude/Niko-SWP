@@ -31,6 +31,14 @@ abstract class MPC_shieldMissileScript: OnFireEffectPlugin, MPC_shieldProvider {
         const val RAYCAST_STEP_MULT = 8f
         const val DAMAGE_NULLIFIED_KEY = "MPC_shieldNullifiedDamage"
 
+        fun createProcessingFXDrone(): ShipAPI {
+            val variant = Global.getSettings().getVariant("niko_shield_drone_Shield")!!
+            val drone = Global.getCombatEngine().createFXDrone(variant)
+            Global.getCombatEngine().addEntity(drone)
+
+            return drone
+        }
+
         fun addShieldDroneParameters(drone: ShipAPI, id: String) {
             drone.isHoldFire = true
             drone.mutableStats.engineDamageTakenMult.modifyMult(id, 0f)
@@ -66,7 +74,7 @@ abstract class MPC_shieldMissileScript: OnFireEffectPlugin, MPC_shieldProvider {
         val fleetManager = engine.getFleetManager(projectile.owner)
         val oldSuppress = fleetManager.isSuppressDeploymentMessages
         fleetManager.isSuppressDeploymentMessages = true
-        val drone = fleetManager.spawnShipOrWing(variantId, projectile.location, 0f) // we update its movement later
+        val drone = createProcessingFXDrone() // we update its movement later
         drone.isAlly = projectile.source?.isAlly == true
         fleetManager.isSuppressDeploymentMessages = oldSuppress
 

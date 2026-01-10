@@ -1,3 +1,16 @@
+1.1.0
+
+Mallet small nerfed
+    -10 ammo
+    +0.5 secs refire delay
+
+Shields now done via fxdrones
+
+Shield nodes now have bonus eff on hardpoints
+
+Icewind now has a front shield
+    Omni shield was acting weird
+
 1.0.1
 
 Fixed shields having combat chatter
