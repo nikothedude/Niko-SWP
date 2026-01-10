@@ -7,6 +7,7 @@ import com.fs.starfarer.api.combat.DamageAPI
 import com.fs.starfarer.api.combat.DamagingProjectileAPI
 import com.fs.starfarer.api.combat.EveryFrameWeaponEffectPlugin
 import com.fs.starfarer.api.combat.OnFireEffectPlugin
+import com.fs.starfarer.api.combat.ShieldAPI
 import com.fs.starfarer.api.combat.ShipAPI
 import com.fs.starfarer.api.combat.ShipwideAIFlags
 import com.fs.starfarer.api.combat.WeaponAPI
@@ -21,9 +22,12 @@ import org.lwjgl.util.vector.Vector2f
 
 abstract class MPC_shieldNodeScript: EveryFrameWeaponEffectPlugin, MPC_shieldProvider {
 
+    companion object {
+        const val HARDPOINT_EFF_MULT = 0.8f
+    }
+
     abstract val id: String
     val engine = Global.getCombatEngine()
-    open val variantId: String = "niko_shield_drone_Shield"
     var droneInitialized = false
     lateinit var drone: ShipAPI
     var ship: ShipAPI? = null
@@ -77,12 +81,21 @@ abstract class MPC_shieldNodeScript: EveryFrameWeaponEffectPlugin, MPC_shieldPro
         val fleetManager = engine.getFleetManager(owner)
         val oldSuppress = fleetManager.isSuppressDeploymentMessages
         fleetManager.isSuppressDeploymentMessages = true
-        val drone = fleetManager.spawnShipOrWing(variantId, weapon.location, 0f) // we update its movement later
+        val drone = MPC_shieldMissileScript.createProcessingFXDrone()
+        //val drone = fleetManager.spawnShipOrWing(variantId, weapon.location, 0f) // we update its movement later
         drone.isAlly = weapon.ship?.isAlly == true
         fleetManager.isSuppressDeploymentMessages = oldSuppress
 
         MPC_shieldMissileScript.addShieldDroneParameters(drone, id)
         createShieldAndFlux(drone, null, id)
+        if (weapon.slot.isHardpoint) {
+            drone.setShield(
+                drone.shield.type,
+                drone.shield.upkeep,
+                drone.shield.fluxPerPointOfDamage * HARDPOINT_EFF_MULT,
+                drone.shield.arc
+            )
+        }
 
         return drone
     }
@@ -104,13 +117,13 @@ abstract class MPC_shieldNodeScript: EveryFrameWeaponEffectPlugin, MPC_shieldPro
                 engine.removeEntity(drone)
                 return
             }
-            if (ship.fluxTracker.isOverloaded || ship.fluxTracker.isVenting) {
+            if (ship.fluxTracker.isOverloaded || ship.fluxTracker.isVenting || ship.isHoldFire || ship.isHoldFireOneFrame) {
                 disableShield()
                 return
             }
         }
 
-        if (weapon.isDisabled) {
+        if (weapon.isDisabled || weapon.isForceNoFireOneFrame) {
             disableShield()
         } else {
             enableShield()

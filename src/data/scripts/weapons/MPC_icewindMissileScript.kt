@@ -17,7 +17,7 @@ class MPC_icewindMissileScript: MPC_shieldMissileScript() {
     }
 
     override fun getShieldType(): ShieldAPI.ShieldType {
-        return ShieldAPI.ShieldType.OMNI
+        return ShieldAPI.ShieldType.FRONT
     }
 
     override fun getShieldArc(): Float {
