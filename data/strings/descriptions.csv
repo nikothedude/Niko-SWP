@@ -1,7 +1,7 @@
 id,type,text1,text2,text3,notes
 niko_bullrushRack,WEAPON,"A medium-range EMP missile, equipped with a small shield generator that backfeeds into the EMP emitter, causing increasing damage as shield strain rises.",,,
 niko_towerTorpedo,WEAPON,"An extremely slow ""torpedo"" with an extremely strong shield generator integrated into its hull. In absence of payload, the shield generator will overload on impact and cause modest damage. Best used defensively.",,,
-niko_towerTorpedoLauncher,WEAPON,"A simple launch tube loaded with six tower-class shield generators. Capable of firing in rapid succession, this weapon is capable of shutting down all but the most intense incoming fire.",,,
+niko_towerTorpedoLauncher,WEAPON,A simple launch tube loaded with six tower-class shield generators.,,,
 niko_icewindPod,WEAPON,"An atypical missile weapon, the icewind trades beam damage for a devastating EMP effect that can leave any ships that dare to lower their shields crippled for long periods of time. Fragile on paper, the icewind is protected only by a small shield generator and its generous range.",,,
 niko_mallet,WEAPON,"A low-yield chemical warhead strapped to an underwhelming engine, held together only by a small shield generator attached to the fore of the hull. Useful at both absorbing and delivering modest damage.
 

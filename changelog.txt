@@ -1,3 +1,9 @@
+1.1.1
+SAVE COMPATIBLE
+
+Mallet small now has -0.25s refire delay
+Small shield node op: 8 -> 6
+
 1.1.0
 
 Mallet small nerfed
